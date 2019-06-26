@@ -29,7 +29,7 @@ export class UserService{
         return this._http.post(this.url+'login', params, {headers: headers});
     }
 
-    register(user_to_register){
+    register(user_to_register): Observable<any>{
         let json = JSON.stringify(user_to_register);
         let params = json;
         let headers = new HttpHeaders().set('Content-Type','application/json');

@@ -154,21 +154,21 @@
                   <div class="form-group required">
                     <label for="input-firstname" class="col-sm-2 control-label" >Nombre</label>
                     <div class="col-sm-10">
-                      <input type="text" #nombre="ngModel" class="form-control" id="input-firstname" placeholder="Ingresa tu Nombre(s)" value="" name="nombre" [(ngModel)]="user_register.nombre" autocomplete="off" required>
+                      <input type="text" #nombre="ngModel" class="form-control" id="input-firstname" placeholder="Ingresa tu Nombre(s)" value="" name="nombre" [(ngModel)]="user.nombre" autocomplete="off" required>
                       <span *ngIf="!nombre.valid && nombre.touched">El nombre es obligatorio</span>
                     </div>
                   </div>
                   <div class="form-group required">
                     <label for="input-lastname" class="col-sm-2 control-label">Apellidos</label>
                     <div class="col-sm-10">
-                      <input type="text" #apellidos="ngModel" class="form-control" id="input-lastname" placeholder="Ingresa tus Apellidos" value="" name="apellidos" [(ngModel)]="user_register.apellidos" autocomplete="off" required>
+                      <input type="text" #apellidos="ngModel" class="form-control" id="input-lastname" placeholder="Ingresa tus Apellidos" value="" name="apellidos" [(ngModel)]="user.apellidos" autocomplete="off" required>
                       <span *ngIf="!apellidos.valid && apellidos.touched">Los apellidos son obligatorios</span>
                     </div>
                   </div>
                   <div class="form-group required">
                     <label for="input-fecha-nacimiento" class="col-sm-2 control-label">Fecha de Nacimiento</label>
                     <div class="col-sm-10">
-                      <input type="date" #fecha_nacimiento="ngModel" class="form-control" id="input-email" placeholder="Ingresa tu fecha de nacimiento" value="" name="fecha_nacimiento" [(ngModel)]="user_register.fecha_nacimiento" autocomplete="off" required>
+                      <input type="date" #fecha_nacimiento="ngModel" class="form-control" id="input-email" placeholder="Ingresa tu fecha de nacimiento" value="" name="fecha_nacimiento" [(ngModel)]="user.fecha_nacimiento" autocomplete="off" required>
                       <span *ngIf="!fecha_nacimiento.valid && fecha_nacimiento.touched">La fecha de nacimiento es obligatoria</span>
                     </div>
                   </div>
@@ -178,14 +178,14 @@
                   <div class="form-group required">
                     <label for="input-email" class="col-sm-2 control-label">Correo electrónico</label>
                     <div class="col-sm-10">
-                      <input type="email" #correo="ngModel" class="form-control" id="input-email" placeholder="Ingresa tu correo" value="" name="correo" [(ngModel)]="user_register.correo" autocomplete="off" required>
+                      <input type="email" #correo="ngModel" class="form-control" id="input-email" placeholder="Ingresa tu correo" value="" name="correo" [(ngModel)]="user.correo" autocomplete="off" required>
                       <span *ngIf="!correo.valid && correo.touched">El correo es obligatorio</span>
                     </div>
                   </div>
                   <div class="form-group required">
                     <label for="input-password" class="col-sm-2 control-label">Contraseña</label>
                     <div class="col-sm-10">
-                      <input type="password" #password="ngModel" class="form-control" id="input-password" placeholder="Ingresa tu contraseña" value="" name="password" [(ngModel)]="user_register.password" autocomplete="off" required>
+                      <input type="password" #password="ngModel" class="form-control" id="input-password" placeholder="Ingresa tu contraseña" value="" name="password" [(ngModel)]="user.password" autocomplete="off" required>
                       <span *ngIf="!password.valid && password.touched">El password es obligatorio</span>
                     </div>
                   </div>
