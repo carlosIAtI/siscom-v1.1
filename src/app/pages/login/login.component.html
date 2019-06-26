@@ -1,0 +1,360 @@
+<!--<div *ngIf="identity" class="navigation col-lg-1">
+        <h1>{{title}}</h1>
+        <span>
+            {{identity.nombre}} {{identity.apellidos}}
+        </span>
+        <br />
+        <span class="btn btn-warning" (click)="logout()">
+            Cerrar sesión
+        </span>
+    </div>
+    
+    <div *ngIf="identity" class="central col-lg-11">
+        <p>Estas logueado en la aplicación</p>
+    </div>-->
+
+<!-- Header
+============================================= -->
+<div *ngIf="!identity" id="header">
+  <header class="header-row">
+      <div class="container">
+          <div class="table-container">
+              <!-- Top Bar
+    ============================================= -->
+              <nav class="htop col-md-9 pull-right flip inner" id="top"> <span class="drop-icon visible-sm visible-xs"><i class="fa fa-align-justify"></i></span>
+                  <div id="top-links" class="nav pull-right flip">
+                      <ul>
+                          <li class="active"><a routerLink="/register">Registrate</a></li>
+
+                      </ul>
+                  </div>
+              </nav>
+              <!-- Top Bar End -->
+
+              <!-- Logo
+    ============================================= -->
+    <div class="col-table-cel col-md-3 col-sm-4 col-xs-12 inner">
+      <div id="logo">
+           <a base href="/"><img class="img-responsive" src="assets/image/siscom.png" title="SISCOM electrónica" alt="SISCOM electrónica"></a>
+       </div>
+  </div>
+              <!-- Phone and Email
+    ============================================= -->
+              <div class="col-md-4 col-md-push-5 col-sm-8 col-xs-12 inner">
+                  <div class="links_contact pull-right flip">
+                      <ul>
+                          <li class="mobile"><i class="fa fa-phone"></i>55 5876 6421</li>
+                          <li class="email"><a href="siscomelectronica@gmail.com"><i class="fa fa-envelope"></i>correo</a></li>
+                      </ul>
+                  </div>
+              </div>
+              <!-- Phone and Email End-->
+
+              <div class="clearfix visible-sm-block visible-xs-block"></div>
+
+              <!-- Search Bar
+    ============================================= -->
+              <!-- Search Bar End-->
+
+              <!-- Mini Cart
+    ============================================= -->
+
+              <!-- Mini Cart End-->
+          </div>
+      </div>
+  </header>
+
+  <!-- Main Menu
+============================================= -->
+  <div class="container">
+      <nav id="menu" class="navbar">
+          <div class="navbar-header"> <span class="visible-xs visible-sm"> Menu <i class="fa fa-align-justify pull-right flip"></i></span></div>
+          <div class="collapse navbar-collapse navbar-ex1-collapse">
+              <ul class="nav navbar-nav">
+                  <li>
+                      <a class="home_link" title="Home" href="index"> <i class="fa fa-home"></i> </a>
+                  </li>
+                  <li class="categories_defu dropdown"><a class="dropdown-toggle" href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/category.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/category.html'"
+                          tppabs="http://demo.harnishdesign.net/html/bigshop/v1/category.html">Catálogo</a>
+                      <div class="dropdown-menu">
+                          <ul>
+                              <li> <a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/category.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/category.html'"
+                                      tppabs="http://demo.harnishdesign.net/html/bigshop/v1/category.html">PC</a> </li>
+                              <li> <a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/category.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/category.html'"
+                                      tppabs="http://demo.harnishdesign.net/html/bigshop/v1/category.html">Mac</a> </li>
+                          </ul>
+                      </div>
+                  </li>
+                  <li class="categories_defu dropdown"><a class="dropdown-toggle" href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/category.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/category.html'"
+                          tppabs="http://demo.harnishdesign.net/html/bigshop/v1/category.html">Sucursales</a>
+                      <div class="dropdown-menu">
+                          <ul>
+                              <li> <a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/category.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/category.html'"
+                                      tppabs="http://demo.harnishdesign.net/html/bigshop/v1/category.html">Macs</a> </li>
+                              <li> <a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/category.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/category.html'"
+                                      tppabs="http://demo.harnishdesign.net/html/bigshop/v1/category.html">Windows</a> </li>
+                          </ul>
+                      </div>
+                  </li>
+                  <li class="categories_defu dropdown"><a class="dropdown-toggle" href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/category.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/category.html'"
+                          tppabs="http://demo.harnishdesign.net/html/bigshop/v1/category.html">Cómo Comprar</a>
+                      <div class="dropdown-menu">
+                          <ul>
+                              <li> <a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/category.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/category.html'"
+                                      tppabs="http://demo.harnishdesign.net/html/bigshop/v1/category.html">Mice and Trackballs</a> </li>
+                              <li> <a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/category.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/category.html'"
+                                      tppabs="http://demo.harnishdesign.net/html/bigshop/v1/category.html">Monitors <span class='fa fa-caret-right'></span></a>
+                                  <div class="dropdown-menu">
+                                      <ul>
+                                          <li> <a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/category.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/category.html'"
+                                                  tppabs="http://demo.harnishdesign.net/html/bigshop/v1/category.html">SubCategory 1 </a> </li>
+                                          <li> <a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/category.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/category.html'"
+                                                  tppabs="http://demo.harnishdesign.net/html/bigshop/v1/category.html">SubCategory 2 <span class='fa fa-caret-right'></span></a>
+                                              <div class="dropdown-menu">
+                                                  <ul>
+                                                      <li> <a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/category.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/category.html'"
+                                                              tppabs="http://demo.harnishdesign.net/html/bigshop/v1/category.html">New SubCategory 1 </a> </li>
+                                                      <li> <a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/category.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/category.html'"
+                                                              tppabs="http://demo.harnishdesign.net/html/bigshop/v1/category.html">New SubCategory 2 </a> </li>
+                                                      <li> <a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/category.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/category.html'"
+                                                              tppabs="http://demo.harnishdesign.net/html/bigshop/v1/category.html">New SubCategory 3 </a> </li>
+                                                      <li> <a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/category.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/category.html'"
+                                                              tppabs="http://demo.harnishdesign.net/html/bigshop/v1/category.html">New SubCategory 4 </a> </li>
+                                                      <li> <a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/category.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/category.html'"
+                                                              tppabs="http://demo.harnishdesign.net/html/bigshop/v1/category.html">New SubCategory 5 </a> </li>
+                                                  </ul>
+                                              </div>
+                                          </li>
+                                      </ul>
+                                  </div>
+                              </li>
+                              <li> <a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/category.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/category.html'"
+                                      tppabs="http://demo.harnishdesign.net/html/bigshop/v1/category.html">Printers</a> </li>
+                              <li> <a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/category.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/category.html'"
+                                      tppabs="http://demo.harnishdesign.net/html/bigshop/v1/category.html">Scanners</a> </li>
+                              <li> <a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/category.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/category.html'"
+                                      tppabs="http://demo.harnishdesign.net/html/bigshop/v1/category.html">Web Cameras</a> </li>
+                          </ul>
+                      </div>
+                  </li>
+                </ul>
+          </div>
+      </nav>
+  </div>
+  <!-- Main Menu End-->
+</div>
+<!-- Header End-->
+<!-- Content
+  ============================================= -->
+  <div *ngIf="!identity" id="container">
+    <div class="container">
+    
+    <!-- Breadcrumb
+    ============================================= -->
+      <ul class="breadcrumb">
+        <li><a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/index.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/index.html'" tppabs="http://demo.harnishdesign.net/html/bigshop/v1/index.html"><i class="fa fa-home"></i></a></li>
+        <li><a href="login.html" tppabs="http://demo.harnishdesign.net/html/bigshop/v1/login.html">Cuenta</a></li>
+        <li><a href="login.html" tppabs="http://demo.harnishdesign.net/html/bigshop/v1/login.html">Login</a></li>
+      </ul><!-- Breadcrumb End-->
+      
+      <div class="row">
+        <!--Middle Part Start-->
+        <div id="content" class="col-sm-9">
+          <h1 class="title">Cuenta de Ingreso</h1>
+          <div class="row">
+            <div class="col-sm-6">
+              <h2 class="subtitle"><span>Nuevo cliente</span></h2>
+              <p><strong>Registrar Cuenta</strong></p>
+              <p>
+                  Al crear una cuenta, podrá comprar más rápido, estar actualizado sobre el estado de un pedido y realizar un seguimiento de los pedidos que haya realizado anteriormente.</p>
+                  <a routerLink="registro" class="btn btn-primary">Continuar</a> </div>
+            <div class="col-sm-6">
+              <h2 class="subtitle"><span>Soy Cliente</span></h2>
+              <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                  <label class="control-label" for="input-email">Dirección de correo electrónico</label>
+                  <input type="email" #correo="ngModel" name="correo" [(ngModel)]="user.correo" placeholder="Dirección de correo electrónico" id="input-email" class="form-control" autocomplete="off" required/>
+                  <span *ngIf="!correo.valid && correo.touched">El correo es obligatorio</span>
+                </div>
+                <div class="form-group">
+                  <label class="control-label" for="input-password">Contraseña</label>
+                  <input type="password" #password="ngModel" name="password" [(ngModel)]="user.password" placeholder="Contraseña" id="input-password" class="form-control" autocomplete="off" required/>
+                  <span *ngIf="!password.valid && password.touched">El password es obligatorio</span>
+                  <br />
+                  <div *ngIf="errorMessage">
+                      <div class="alert alert-info">
+                          <strong>Error</strong> {{errorMessage}}
+                      </div>
+                  </div>
+                  <br/>
+                  <a href="#">¿Olvidaste tu contraseña?</a></div>
+                <input type="submit" value="Login" class="btn btn-primary" />
+              </form>
+            </div>
+          </div>
+        </div>
+        
+   <!-- Feature Box
+============================================= -->
+<div class="container">
+  <div class="custom-feature-box row">
+      <div class="col-md-4 col-sm-4 col-xs-12">
+          <div class="feature-box fbox_1">
+              <div class="title">Devolución sin Costo</div>
+              <p>en pedidos superiores a $ 1,000</p>
+          </div>
+      </div>
+      <div class="col-md-4 col-sm-4 col-xs-12">
+          <div class="feature-box fbox_2">
+              <div class="title">Envío Gratis</div>
+              <p>en pedidos superiores a $ 1,000</p>
+          </div>
+      </div>
+      <div class="col-md-4 col-sm-4 col-xs-12">
+          <div class="feature-box fbox_3">
+              <div class="title">Tarjetas de regalo</div>
+              <p>Give the special perfect gift</p>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- Feature Box End-->
+
+
+
+
+<!-- Footer
+  ============================================= -->
+  <footer id="footer">
+
+    <!-- Footer Part 1
+============================================= -->
+    <div class="fpart-first">
+        <div class="container">
+            <div class="row">
+
+                <div class="column col-lg-2 col-md-2 col-sm-3 col-xs-12">
+                    <h5>Information</h5>
+                    <ul>
+                        <li><a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/about-us.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/about-us.html'"
+                                tppabs="http://demo.harnishdesign.net/html/bigshop/v1/about-us.html">About Us</a></li>
+                        <li><a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/about-us.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/about-us.html'"
+                                tppabs="http://demo.harnishdesign.net/html/bigshop/v1/about-us.html">Delivery Information</a></li>
+                        <li><a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/about-us.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/about-us.html'"
+                                tppabs="http://demo.harnishdesign.net/html/bigshop/v1/about-us.html">Privacy Policy</a></li>
+                        <li><a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/about-us.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/about-us.html'"
+                                tppabs="http://demo.harnishdesign.net/html/bigshop/v1/about-us.html">Terms &amp; Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="column col-lg-2 col-md-2 col-sm-3 col-xs-12">
+                    <h5>Customer Service</h5>
+                    <ul>
+                        <li><a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/contact-us.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/contact-us.html'"
+                                tppabs="http://demo.harnishdesign.net/html/bigshop/v1/contact-us.html">Contact Us</a></li>
+                        <li><a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/returns.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/returns.html'"
+                                tppabs="http://demo.harnishdesign.net/html/bigshop/v1/returns.html">Returns</a></li>
+                        <li><a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/sitemap.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/sitemap.html'"
+                                tppabs="http://demo.harnishdesign.net/html/bigshop/v1/sitemap.html">Site Map</a></li>
+                    </ul>
+                </div>
+                <div class="column col-lg-2 col-md-2 col-sm-3 col-xs-12">
+                    <h5>Extras</h5>
+                    <ul>
+                        <li><a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/manufacturer.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/manufacturer.html'"
+                                tppabs="http://demo.harnishdesign.net/html/bigshop/v1/manufacturer.html">Brands</a></li>
+                        <li><a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/gift-voucher.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/gift-voucher.html'"
+                                tppabs="http://demo.harnishdesign.net/html/bigshop/v1/gift-voucher.html">Gift Vouchers</a></li>
+                        <li><a href="#">Affiliates</a></li>
+                        <li><a href="#">Specials</a></li>
+                    </ul>
+                </div>
+                <div class="column col-lg-2 col-md-2 col-sm-3 col-xs-12">
+                    <h5>My Account</h5>
+                    <ul>
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Wish List</a></li>
+                        <li><a href="#">Order History</a></li>
+                        <li><a href="#">Newsletter</a></li>
+                    </ul>
+                </div>
+
+                <div class="contact col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <h5>Contact Details</h5>
+                    <ul>
+                        <li class="address"><i class="fa fa-map-marker"></i>Bigshop Plaza, 22 Hoi Wing Road, Delhi, India.</li>
+                        <li class="mobile"><i class="fa fa-phone"></i>+91 9898989898</li>
+                        <li class="email"><i class="fa fa-envelope"></i><a href="mailto:info@bigshop.com">info@bigshop.com</a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Footer Part 1 End-->
+
+    <!-- Footer Part 2
+============================================= -->
+    <div class="fpart-second">
+        <div class="container">
+            <div id="powered">
+                <div class="row">
+
+                    <!-- Payments Types
+      ============================================= -->
+                    <div class="col-md-4">
+                        <div class="payments_types">
+                            <a href="#" target="_blank"> <img data-toggle="tooltip" src="assets/image/payment/payment_paypal.png" tppabs="http://demo.harnishdesign.net/html/bigshop/v1/image/payment/payment_paypal.png" alt="paypal" title="PayPal"></a>
+                            <a href="#" target="_blank">
+                                <img data-toggle="tooltip" src="assets/image/payment/payment_american.png" tppabs="http://demo.harnishdesign.net/html/bigshop/v1/image/payment/payment_american.png" alt="american-express" title="American Express"></a>
+                            <a href="#" target="_blank"> <img data-toggle="tooltip" src="assets/image/payment/payment_2checkout.png" tppabs="http://demo.harnishdesign.net/html/bigshop/v1/image/payment/payment_2checkout.png" alt="2checkout" title="2checkout"></a>
+                            <a href="#" target="_blank"> <img data-toggle="tooltip" src="assets/image/payment/payment_maestro.png" tppabs="http://demo.harnishdesign.net/html/bigshop/v1/image/payment/payment_maestro.png" alt="maestro" title="Maestro"></a>
+                            <a href="#" target="_blank">
+                                <img data-toggle="tooltip" src="assets/image/payment/payment_discover.png" tppabs="http://demo.harnishdesign.net/html/bigshop/v1/image/payment/payment_discover.png" alt="discover" title="Discover"></a>
+                        </div>
+                    </div>
+                    <!--Payments Types End-->
+
+                    <!-- Payments Types
+        ============================================= -->
+                    <div class="powered_text pull-left flip col-md-4">Bigshop Template © 2018, Template By HarnishDesign</div>
+
+                    <!-- Social Icon
+        ============================================= -->
+                    <div class="col-md-4">
+                        <div class="social pull-right flip">
+                            <a href="javascript:if(confirm('https://www.facebook.com/harnishdesign/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed using an unsupported protocol (e.g., gopher).  \n\nDo you want to open it from the server?'))window.location='https://www.facebook.com/harnishdesign/'"
+                                tppabs="https://www.facebook.com/harnishdesign/" target="_blank"> <img data-toggle="tooltip" src="assets/image/socialicons/facebook.png" tppabs="http://demo.harnishdesign.net/html/bigshop/v1/image/socialicons/facebook.png" alt="Facebook" title="Facebook"></a>
+                            <a href="#" target="_blank">
+                                <img data-toggle="tooltip" src="assets/image/socialicons/twitter.png" tppabs="http://demo.harnishdesign.net/html/bigshop/v1/image/socialicons/twitter.png" alt="Twitter" title="Twitter"> </a>
+                            <a href="#" target="_blank">
+                                <img data-toggle="tooltip" src="assets/image/socialicons/google_plus.png" tppabs="http://demo.harnishdesign.net/html/bigshop/v1/image/socialicons/google_plus.png" alt="Google+" title="Google+"> </a>
+                            <a href="#" target="_blank">
+                                <img data-toggle="tooltip" src="assets/image/socialicons/pinterest.png" tppabs="http://demo.harnishdesign.net/html/bigshop/v1/image/socialicons/pinterest.png" alt="Pinterest" title="Pinterest"> </a>
+                            <a href="#" target="_blank">
+                                <img data-toggle="tooltip" src="assets/image/socialicons/rss.png" tppabs="http://demo.harnishdesign.net/html/bigshop/v1/image/socialicons/rss.png" alt="RSS" title="RSS"> </a>
+                        </div>
+                    </div>
+                    <!--Payments Types End-->
+                </div>
+            </div>
+
+            <!-- Custom Block
+    ============================================= -->
+            <div class="custom-text">
+                <p>This is a CMS block. You can insert any content (HTML, Text, Images) Here. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+            <!--Custom Block End-->
+
+        </div>
+    </div>
+    <!--Footer Part 2 End-->
+
+    <!-- Back to Top
+============================================= -->
+    <div id="back-top"><a data-toggle="tooltip" title="Back to Top" href="javascript:void(0)" class="backtotop"><i class="fa fa-chevron-up"></i></a></div>
+
+</footer>
+<!--Footer End-->
+
+</div>
+</div>
+</div>
