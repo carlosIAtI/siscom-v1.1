@@ -1,377 +1,504 @@
-
-
-<!-- Header
+<div *ngIf="!identity">
+    <!-- Document Wrapper
 ============================================= -->
-<div id="header">
-    <header class="header-row">
-        <div class="container">
-            <div class="table-container">
-                <!-- Top Bar
-      ============================================= -->
-                <nav class="htop col-md-9 pull-right flip inner" id="top"> <span class="drop-icon visible-sm visible-xs"><i class="fa fa-align-justify"></i></span>
-                    <div id="top-links" class="nav pull-right flip">
-                        <ul>
-                            <li class="active"><a routerLink="/login">login</a></li>
-  
+    <div class="wrapper-box">
+
+        <!-- Header
+        ============================================= -->
+        <div id="header">
+            <header class="header-row">
+                <div class="container">
+                    <div class="table-container">
+                        <!-- Top Bar
+                  ============================================= -->
+                        <nav class="htop col-md-9 pull-right flip inner" id="top"> <span class="drop-icon visible-sm visible-xs"><i class="fa fa-align-justify"></i></span>
+                            <div id="top-links" class="nav pull-right flip">
+                                <ul>
+                                    <li><a routerLink="/login"><i class="fa fa-user"></i> Inicio</a></li>
+                                    <li><a routerLink="/register"><i class="fa fa-book"></i> Registro</a></li>
+                                </ul>
+                            </div>
+                            <div class="pull-right flip left-top">
+                                <div class="links">
+                                    <ul>
+                                        <li class="mobile"><i class="fa fa-phone"></i> 55 5876 6421</li>
+                                        <li class="email"><a href="mailto:siscomelectronica@gmail.com"><i class="fa fa-envelope"></i> siscomelectronica@gmail.com</a></li>
+                                        <li><a href="wishlist.html" tppabs="wishlist.html" id="wishlist-total"><i class="fa fa-heart"></i> Favoritos</a></li>
+                                    </ul>
+                                </div>
+
+
+
+
+
+                            </div>
+                        </nav>
+                        <!-- Top Bar End -->
+
+                        <!-- Logo
+                  ============================================= -->
+                        <div class="col-table-cel col-md-3 col-sm-4 col-xs-12 inner">
+                            <div id="logo">
+                                <a routerLink="/"><img class="img-responsive" src="assets/image/logo.png" tppabs="logo.png" title="SISCOM" alt="SISCOM" /></a>
+                            </div>
+                        </div>
+                        <!-- Logo End -->
+
+                        <!-- Phone and Email
+                  ============================================= -->
+                        <div class="col-md-4 col-md-push-5 col-sm-8 col-xs-12 inner">
+                            <div class="links_contact pull-right flip">
+                                <ul>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Phone and Email End-->
+
+                        <div class="clearfix visible-sm-block visible-xs-block"></div>
+
+                        <!-- Mini Cart
+                  ============================================= -->
+                        <div class="col-md-9 pull-right col-sm-4 col-xs-12 inner">
+                            <div id="cart">
+                                <button type="button" data-toggle="dropdown" data-loading-text="Cargando..." class="heading dropdown-toggle">
+                     
+                     </button>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <table class="table">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-center">
+                                                        <a href="product.html" tppabs="product.html"><img class="img-thumbnail" title="Xitefun Causal Wear Fancy Shoes" alt="Xitefun Causal Wear Fancy Shoes" src="assets/image/product/sony_vaio_1-60x60.jpg" tppabs="/image/product/sony_vaio_1-60x60.jpg"></a>
+                                                    </td>
+                                                    <td class="text-left"><a href="product.html" tppabs="product.html">Xitefun Causal Wear Fancy Shoes</a></td>
+                                                    <td class="text-right">x 1</td>
+                                                    <td class="text-right">$902.00</td>
+                                                    <td class="text-center"><button class="btn btn-danger btn-xs remove" title="Remove" onClick="" type="button"><i class="fa fa-times"></i></button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">
+                                                        <a href="product.html" tppabs="product.html"><img class="img-thumbnail" title="Aspire Ultrabook Laptop" alt="Aspire Ultrabook Laptop" src="assets/image/product/samsung_tab_1-60x60.jpg" tppabs="assets/image/product/samsung_tab_1-60x60.jpg"></a>
+                                                    </td>
+                                                    <td class="text-left"><a href="product.html" tppabs="product.html">Aspire Ultrabook Laptop</a></td>
+                                                    <td class="text-right">x 1</td>
+                                                    <td class="text-right">$230.00</td>
+                                                    <td class="text-center"><button class="btn btn-danger btn-xs remove" title="Remove" onClick="" type="button"><i class="fa fa-times"></i></button></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <table class="table table-bordered">
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="text-right"><strong>Sub-Total</strong></td>
+                                                        <td class="text-right">$940.00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-right"><strong>Eco Tax (-2.00)</strong></td>
+                                                        <td class="text-right">$4.00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-right"><strong>VAT (20%)</strong></td>
+                                                        <td class="text-right">$188.00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-right"><strong>Total</strong></td>
+                                                        <td class="text-right">$1,132.00</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <p class="checkout"><a href="cart.html'" tppabs="cart.html" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Ver Lista</a>&nbsp;&nbsp;&nbsp;<a href="checkout.html" tppabs="checkout.html" class="btn btn-primary"><i class="fa fa-share"></i> Checkout</a></p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Mini Cart End-->
+                    </div>
+                </div>
+            </header>
+
+            <!-- Main Menu
+            ============================================= -->
+            <div class="container">
+                <nav id="menu" class="navbar">
+                    <div class="navbar-header"> <span class="visible-xs visible-sm"> Menu <i class="fa fa-align-justify pull-right flip"></i></span></div>
+                    <div class="collapse navbar-collapse navbar-ex1-collapse">
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <a class="home_link" title="Home" href="index.htm" tppabs="index.html"> <i class="fa fa-home"></i> </a>
+                            </li>
+                            <li class="categories_defu dropdown"><a class="dropdown-toggle" href="category.html" tppabs="category.html">Catálogo</a>
+                                <div class="dropdown-menu">
+                                    <ul>
+                                        <li> <a href="category.html" tppabs="category.html">PC</a> </li>
+                                        <li> <a href="category.html" tppabs="category.html">Mac</a> </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="categories_defu dropdown"><a class="dropdown-toggle" href="category.html" tppabs="category.html">Sucursales</a>
+                                <div class="dropdown-menu">
+                                    <ul>
+                                        <li> <a href="category.html" tppabs="category.html">Macs</a> </li>
+                                        <li> <a href="category.html" tppabs="category.html">Windows</a> </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="categories_defu dropdown"><a class="dropdown-toggle" href="category.html" tppabs="category.html">Cómo Comprar</a>
+                                <div class="dropdown-menu">
+                                    <ul>
+                                        <li> <a href="category.html" tppabs="category.html">Mice and Trackballs</a> </li>
+                                        <li> <a href="category.html" tppabs="category.html">Monitors <span class='fa fa-caret-right'></span></a>
+                                            <div class="dropdown-menu">
+                                                <ul>
+                                                    <li> <a href="category.html" tppabs="category.html">Subcategoría 1 </a> </li>
+                                                    <li> <a href="category.html" tppabs="category.html">Subcategoría 2 <span class='fa fa-caret-right'></span></a>
+                                                        <div class="dropdown-menu">
+                                                            <ul>
+                                                                <li> <a href="category.html" tppabs="category.html">New Subcategoría 1 </a> </li>
+                                                                <li> <a href="category.html" tppabs="category.html">New Subcategoría 2 </a> </li>
+                                                                <li> <a href="category.html" tppabs="category.html">New Subcategoría 3 </a> </li>
+                                                                <li> <a href="category.html" tppabs="category.html">New Subcategoría 4 </a> </li>
+                                                                <li> <a href="category.html" tppabs="category.html">New Subcategoría 5 </a> </li>
+                                                            </ul>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li> <a href="category.html" tppabs="category.html">Printers</a> </li>
+                                        <li> <a href="category.html" tppabs="category.html">Scanners</a> </li>
+                                        <li> <a href="category.html" tppabs="category.html">Web Cameras</a> </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="categories_defu dropdown"><a class="dropdown-toggle" href="category.html" tppabs="category.html">FAQ</a> </li>
+
+                            <li class="dropdown"><a>Pages</a>
+                                <div class="dropdown-menu">
+                                    <ul>
+                                        <li><a href="category.html" tppabs="category.html">Category (Grid/List)</a></li>
+                                        <li><a href="product.html" tppabs="product.html">Product Page</a></li>
+                                        <li><a href="cart.html" tppabs="cart.html">Shopping Cart</a></li>
+                                        <li><a href="checkout.html" tppabs="checkout.html">Checkout</a></li>
+                                        <li><a href="compare.html'" tppabs="compare.html">Product Compare</a></li>
+                                        <li><a href="wishlist.html'" tppabs="wishlist.html">Wishlist</a></li>
+                                        <li><a href="search.html'" tppabs="search.html">Search</a></li>
+                                        <li><a href="manufacturer.html" tppabs="manufacturer.html">Brands</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="about-us.html'" tppabs="about-us.html">About Us</a></li>
+                                        <li><a href="elements.html" tppabs="elements.html">Elements</a></li>
+                                        <li><a href="elements-forms.html'" tppabs="elements-forms.html">Forms</a></li>
+                                        <li><a href="careers.html'" tppabs="careers.html">Careers</a></li>
+                                        <li><a href="faq.html" tppabs="faq.html">Faq</a></li>
+                                        <li><a href="404.html" tppabs="404.html">404</a></li>
+                                        <li><a href="sitemap.html" tppabs="sitemap.html">Sitemap</a></li>
+                                        <li><a href="contact-us.html" tppabs="contact-us.html">Contact Us</a></li>
+                                        <li><a href="email-template'" tppabs="email-template" target="_blank">Email Template Page</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="login.html" tppabs="login.html">Inicio</a></li>
+                                        <li><a href="register.html" tppabs="register.html">Registrese</a></li>
+                                        <li><a href="my-account.html" tppabs="my-account.html">Mi Cuenta</a></li>
+                                        <li><a href="order-history.html" tppabs="order-history.html">Historial de Pedidos</a></li>
+                                        <li><a href="order-information.html" tppabs="order-information.html">Información de Pedido</a></li>
+                                        <li><a href="return.html" tppabs="return.html">Devoluciones</a></li>
+                                        <!--<li><a href="gift-voucher.html" tppabs="gift-voucher.html">Tarjeta de Regalos</a></li>-->
+                                    </ul>
+                                </div>
+                            </li>
+                            <!--<li class="contact-link"><a href="contact-us.html" tppabs="contact-us.html">Contáctanos</a></li>-->
                         </ul>
                     </div>
                 </nav>
-                <!-- Top Bar End -->
-  
-                <!-- Logo
-      ============================================= -->
-      <div class="col-table-cel col-md-3 col-sm-4 col-xs-12 inner">
-        <div id="logo">
-             <a base href="/"><img class="img-responsive" src="assets/image/siscom.png" title="SISCOM electrónica" alt="SISCOM electrónica"></a>
-         </div>
-    </div>
-                <!-- Phone and Email
-      ============================================= -->
-                <div class="col-md-4 col-md-push-5 col-sm-8 col-xs-12 inner">
-                    <div class="links_contact pull-right flip">
-                        <ul>
-                            <li class="mobile"><i class="fa fa-phone"></i>55 5876 6421</li>
-                            <li class="email"><a href="siscomelectronica@gmail.com"><i class="fa fa-envelope"></i>correo</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Phone and Email End-->
-  
-                <div class="clearfix visible-sm-block visible-xs-block"></div>
-  
-                <!-- Search Bar
-      ============================================= -->
-                <!-- Search Bar End-->
-  
-                <!-- Mini Cart
-      ============================================= -->
-  
-                <!-- Mini Cart End-->
             </div>
+            <!-- Main Menu End-->
         </div>
-    </header>
-  
-    <!-- Main Menu
-  ============================================= -->
-    <div class="container">
-        <nav id="menu" class="navbar">
-            <div class="navbar-header"> <span class="visible-xs visible-sm"> Menu <i class="fa fa-align-justify pull-right flip"></i></span></div>
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a class="home_link" title="Home" href="index"> <i class="fa fa-home"></i> </a>
-                    </li>
-                    <li class="categories_defu dropdown"><a class="dropdown-toggle" href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/category.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/category.html'"
-                            tppabs="http://demo.harnishdesign.net/html/bigshop/v1/category.html">Catálogo</a>
-                        <div class="dropdown-menu">
-                            <ul>
-                                <li> <a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/category.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/category.html'"
-                                        tppabs="http://demo.harnishdesign.net/html/bigshop/v1/category.html">PC</a> </li>
-                                <li> <a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/category.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/category.html'"
-                                        tppabs="http://demo.harnishdesign.net/html/bigshop/v1/category.html">Mac</a> </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="categories_defu dropdown"><a class="dropdown-toggle" href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/category.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/category.html'"
-                            tppabs="http://demo.harnishdesign.net/html/bigshop/v1/category.html">Sucursales</a>
-                        <div class="dropdown-menu">
-                            <ul>
-                                <li> <a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/category.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/category.html'"
-                                        tppabs="http://demo.harnishdesign.net/html/bigshop/v1/category.html">Macs</a> </li>
-                                <li> <a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/category.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/category.html'"
-                                        tppabs="http://demo.harnishdesign.net/html/bigshop/v1/category.html">Windows</a> </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="categories_defu dropdown"><a class="dropdown-toggle" href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/category.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/category.html'"
-                            tppabs="http://demo.harnishdesign.net/html/bigshop/v1/category.html">Cómo Comprar</a>
-                        <div class="dropdown-menu">
-                            <ul>
-                                <li> <a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/category.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/category.html'"
-                                        tppabs="http://demo.harnishdesign.net/html/bigshop/v1/category.html">Mice and Trackballs</a> </li>
-                                <li> <a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/category.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/category.html'"
-                                        tppabs="http://demo.harnishdesign.net/html/bigshop/v1/category.html">Monitors <span class='fa fa-caret-right'></span></a>
-                                    <div class="dropdown-menu">
-                                        <ul>
-                                            <li> <a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/category.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/category.html'"
-                                                    tppabs="http://demo.harnishdesign.net/html/bigshop/v1/category.html">SubCategory 1 </a> </li>
-                                            <li> <a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/category.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/category.html'"
-                                                    tppabs="http://demo.harnishdesign.net/html/bigshop/v1/category.html">SubCategory 2 <span class='fa fa-caret-right'></span></a>
-                                                <div class="dropdown-menu">
-                                                    <ul>
-                                                        <li> <a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/category.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/category.html'"
-                                                                tppabs="http://demo.harnishdesign.net/html/bigshop/v1/category.html">New SubCategory 1 </a> </li>
-                                                        <li> <a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/category.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/category.html'"
-                                                                tppabs="http://demo.harnishdesign.net/html/bigshop/v1/category.html">New SubCategory 2 </a> </li>
-                                                        <li> <a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/category.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/category.html'"
-                                                                tppabs="http://demo.harnishdesign.net/html/bigshop/v1/category.html">New SubCategory 3 </a> </li>
-                                                        <li> <a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/category.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/category.html'"
-                                                                tppabs="http://demo.harnishdesign.net/html/bigshop/v1/category.html">New SubCategory 4 </a> </li>
-                                                        <li> <a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/category.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/category.html'"
-                                                                tppabs="http://demo.harnishdesign.net/html/bigshop/v1/category.html">New SubCategory 5 </a> </li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                        </ul>
+        <!-- Header End-->
+
+        <!-- Content
+          ============================================= -->
+        <div id="container">
+            <div class="container">
+
+                <!-- Breadcrumb
+            ============================================= -->
+                <ul class="breadcrumb">
+                    <li><a href="index.html" tppabs="http://demo.harnishdesign.net/html/bigshop/v1/index.html"><i class="fa fa-home"></i></a></li>
+                    <li><a href="login.html" tppabs="http://demo.harnishdesign.net/html/bigshop/v1/login.html">Cuenta</a></li>
+                    <li><a href="login.html" tppabs="http://demo.harnishdesign.net/html/bigshop/v1/login.html">Registro</a></li>
+                </ul>
+                <!-- Breadcrumb End-->
+
+                <div class="row">
+                    <!--Middle Part Start-->
+                    <div class="col-sm-9" id="content">
+                        <h2 class="title">Registre su Cuenta</h2>
+                        <p>SI ya se registró previamente, por favor inicie sesión en <a href="login.html" tppabs="login.html">Inicio</a>.</p>
+                        <form #registerForm="ngForm" (ngSubmit)="onSubmitRegister()" class="form-horizontal">
+                            <fieldset id="account">
+                                <legend>Sus Datos Personales</legend>
+                                <div style="display: none;" class="form-group required">
+                                    <label class="col-sm-2 control-label">Customer Group</label>
+                                    <div class="col-sm-10">
+                                        <div class="radio">
+                                            <label>
+                              <input type="radio" checked="checked" value="1" name="customer_group_id">
+                              Default</label>
+                                        </div>
                                     </div>
-                                </li>
-                                <li> <a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/category.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/category.html'"
-                                        tppabs="http://demo.harnishdesign.net/html/bigshop/v1/category.html">Printers</a> </li>
-                                <li> <a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/category.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/category.html'"
-                                        tppabs="http://demo.harnishdesign.net/html/bigshop/v1/category.html">Scanners</a> </li>
-                                <li> <a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/category.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/category.html'"
-                                        tppabs="http://demo.harnishdesign.net/html/bigshop/v1/category.html">Web Cameras</a> </li>
+                                </div>
+                                <div class="form-group required">
+                                    <label for="input-firstname" class="col-sm-2 control-label">Nombre(s)</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" #nombre="ngModel" name="nombre" [(ngModel)]="user.nombre" class="form-control" id="input-firstname" placeholder="Nombre(s)" value="" autocomplete="off" required />
+                                        <span *ngIf="!nombre.valid && nombre.touched" class="label label-danger">El nombre es obligatorio</span>
+                                    </div>
+                                </div>
+                                <div class="form-group required">
+                                    <label for="input-lastname" class="col-sm-2 control-label">Apellidos</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" #apellidos="ngModel" name="apellidos" [(ngModel)]="user.apellidos" class="form-control" id="input-lastname" placeholder="Apellidos" value="" autocomplete="off" required />
+                                        <span *ngIf="!apellidos.valid && apellidos.touched" class="label label-danger">Los apellidos son obligatorios</span>
+                                    </div>
+                                </div>
+                                <div class="form-group required">
+                                    <label for="input-email" class="col-sm-2 control-label">E-Mail</label>
+                                    <div class="col-sm-10">
+                                        <input type="email" #correo="ngModel" name="correo" [(ngModel)]="user.correo" class="form-control" id="input-email" placeholder="E-Mail" value="" autocomplete="off" required />
+                                        <span *ngIf="!correo.valid && correo.touched" class="label label-danger">El E-Mail es obligatorio</span>
+                                    </div>
+                                </div>
+                                <div class="form-group required">
+                                    <label for="input-fecha_nacimiento" class="col-sm-2 control-label">Fecha de nacimiento</label>
+                                    <div class="col-sm-10">
+                                        <input type="date" #fecha_nacimiento="ngModel" name="fecha_nacimiento" [(ngModel)]="user.fecha_nacimiento" class="form-control" id="input-fecha_nacimiento" placeholder="" value="" autocomplete="off" required />
+                                        <span *ngIf="!fecha_nacimiento.valid && fecha_nacimiento.touched" class="label label-danger">La fecha de nacimiento es obligatoria</span>
+                                    </div>
+                                </div>
+                                <div class="form-group required">
+                                    <label for="input-telephone" class="col-sm-2 control-label">Teléfono</label>
+                                    <div class="col-sm-10">
+                                        <input type="tel" #telefono="ngModel" name="telefono" [(ngModel)]="user.telefono" class="form-control" id="input-telephone" placeholder="Teléfono" value="" autocomplete="off" required />
+                                        <span *ngIf="!telefono.valid && telefono.touched" class="label label-danger">El teléfono es obligatorio</span>
+                                    </div>
+                                </div>
+
+                            </fieldset>
+                            <fieldset id="address">
+                                <legend>Localidad</legend>
+                                <div class="form-group">
+                                    <label for="input-company" class="col-sm-2 control-label">Escuela</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" #escuela="ngModel" name="escuela" [(ngModel)]="user.escuela" class="form-control" id="input-company" placeholder="Escuela" value="" autocomplete="off" required />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="input-postcode" class="col-sm-2 control-label">Código Postal</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" #cp="ngModel" name="cp" [(ngModel)]="user.cp" class="form-control" id="input-postcode" placeholder="Código Postal" value="" autocomplete="off" required />
+                                    </div>
+                                </div>
+                                <div class="form-group required">
+                                    <label for="input-zone" class="col-sm-2 control-label">Sucursal</label>
+                                    <div class="col-sm-10">
+                                        <select #sucursal="ngModel" name="sucursal" [(ngModel)]="user.sucursal" class="form-control" id="input-zone" autocomplete="off" required>
+                                        <option value=""> --- Seleccione una sucursal --- </option>
+                                        <option value="3513" selected="selected" value="138">Lindavista</option>
+                                        <option value="3514">Casco de Santo Tomás</option>
+                                        <option value="3515">Xala</option>
+                                        <option value="3516">Ecatepec</option>
+                                    </select>
+                                        <span *ngIf="!sucursal.valid && sucursal.touched" class="label label-danger">La sucursal es obligatoria</span>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Su Clave</legend>
+                                <div class="form-group required">
+                                    <label for="input-password" class="col-sm-2 control-label">Clave</label>
+                                    <div class="col-sm-10">
+                                        <input type="password" #password="ngModel" name="password" [(ngModel)]="user.password" class="form-control" id="input-password" placeholder="Clave" value="" autocomplete="off" required />
+                                        <span *ngIf="!password.valid && password.touched" class="label label-danger">El password es obligatorio</span>
+                                    </div>
+                                </div>
+                                <div class="form-group required">
+                                    <label for="input-confirm" class="col-sm-2 control-label">Confirmar Clave</label>
+                                    <div class="col-sm-10">
+                                        <input type="password" class="form-control" id="input-confirm" placeholder="Confirmar Clave" value="" name="confirm" />
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <div *ngIf="alertRegister">
+                                <div class="alert alert-danger">
+                                    {{alertRegister}}
+                                </div>
+                            </div>
+                            <div class="buttons">
+                                <div class="pull-right">
+                                    <input type="checkbox" value="1" name="agree"> &nbsp; He leído y estoy de acuerdo con la <a class="agree" href="#"><b>Política de Privacidad</b></a> &nbsp;
+                                    <input type="submit" class="btn btn-primary" value="Continuar">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!--Middle Part End -->
+                </div>
+            </div>
+        </div>
+        <!--Content End-->
+
+        <!-- Footer
+          ============================================= -->
+        <footer id="footer">
+
+            <!-- Footer Part 1
+          ============================================= -->
+            <div class="fpart-first">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="column col-lg-2 col-md-2 col-sm-3 col-xs-12">
+                            <h5>Información</h5>
+                            <ul>
+                                <li><a href="about-us.html" tppabs="about-us.html">Nosotros</a></li>
+                                <li><a href="about-us.html" tppabs="about-us.html">Información de Entrega</a></li>
+                                <li><a href="about-us.html" tppabs="about-us.html">Política de Privacidad</a></li>
+                                <li><a href="about-us.html" tppabs="about-us.html">Términos &amp; Condiciones</a></li>
                             </ul>
                         </div>
-                    </li>
-                  </ul>
-            </div>
-        </nav>
-    </div>
-    <!-- Main Menu End-->
-  </div>
-  <!-- Header End-->  <!-- Content
-    ============================================= -->
-    <div id="container">
-        <div class="container">
-        
-        <!-- Breadcrumb
-        ============================================= -->
-          <ul class="breadcrumb">
-            <li><a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/index.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/index.html'" tppabs="http://demo.harnishdesign.net/html/bigshop/v1/index.html"><i class="fa fa-home"></i></a></li>
-            <li><a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/login.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/login.html'" tppabs="http://demo.harnishdesign.net/html/bigshop/v1/login.html">Cuenta</a></li>
-            <li><a href="register.html" tppabs="http://demo.harnishdesign.net/html/bigshop/v1/register.html">Registro</a></li>
-          </ul><!-- Breadcrumb End-->
-          
-          <div class="row">
-            <!--Middle Part Start-->
-            <div class="col-sm-9" id="content">
-              <h1 class="title">Registrar Cuenta</h1>
-              <p>Si ya tiene una cuenta con nosotros, inicie sesión en la <a routerLink="/login">Página de inicio de sesión</a>.</p>
-              <form #registerForm="ngForm" (ngSubmit)="onSubmitRegister()" class="form-horizontal">
-                <fieldset id="account1">
-                  <legend>Tus datos personales</legend>
-                  <div class="form-group required">
-                    <label for="input-firstname" class="col-sm-2 control-label" >Nombre</label>
-                    <div class="col-sm-10">
-                      <input type="text" #nombre="ngModel" class="form-control" id="input-firstname" placeholder="Ingresa tu Nombre(s)" value="" name="nombre" [(ngModel)]="user.nombre" autocomplete="off" required>
-                      <span *ngIf="!nombre.valid && nombre.touched">El nombre es obligatorio</span>
+                        <div class="column col-lg-2 col-md-2 col-sm-3 col-xs-12">
+                            <h5>Servicio al Cliente</h5>
+                            <ul>
+                                <li><a href="contact-us.html" tppabs="contact-us.html">Contacto</a></li>
+                                <li><a href="returns.html" tppabs="returns.html">Devoluciones</a></li>
+                            </ul>
+                        </div>
+                        <div class="column col-lg-2 col-md-2 col-sm-3 col-xs-12">
+                            <h5>Información Extra</h5>
+                            <ul>
+                                <li><a href="manufacturer.html" tppabs="manufacturer.html">Marcas</a></li>
+                            </ul>
+                        </div>
+                        <div class="column col-lg-2 col-md-2 col-sm-3 col-xs-12">
+                            <h5>Mi Cuenta</h5>
+                            <ul>
+                                <li><a href="#">Mi Cuenta</a></li>
+                                <li><a href="#">Favoritos</a></li>
+                                <li><a href="#">Historia de Pedios</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="contact col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                            <h5>Detalles de Contacto</h5>
+                            <ul>
+                                <li class="address"><i class="fa fa-map-marker"></i>Av. Instituto Politécnico Nacional, Lindavista Nte., 07300 Ciudad de México.</li>
+                                <li class="mobile"><i class="fa fa-phone"></i>55 5876 6421</li>
+                                <li class="email"><i class="fa fa-envelope"></i><a href="mailto: siscomelectronica@gmail.com"> siscomelectronica@gmail.com</a>
+                            </ul>
+                        </div>
                     </div>
-                  </div>
-                  <div class="form-group required">
-                    <label for="input-lastname" class="col-sm-2 control-label">Apellidos</label>
-                    <div class="col-sm-10">
-                      <input type="text" #apellidos="ngModel" class="form-control" id="input-lastname" placeholder="Ingresa tus Apellidos" value="" name="apellidos" [(ngModel)]="user.apellidos" autocomplete="off" required>
-                      <span *ngIf="!apellidos.valid && apellidos.touched">Los apellidos son obligatorios</span>
-                    </div>
-                  </div>
-                  <div class="form-group required">
-                    <label for="input-fecha-nacimiento" class="col-sm-2 control-label">Fecha de Nacimiento</label>
-                    <div class="col-sm-10">
-                      <input type="date" #fecha_nacimiento="ngModel" class="form-control" id="input-email" placeholder="Ingresa tu fecha de nacimiento" value="" name="fecha_nacimiento" [(ngModel)]="user.fecha_nacimiento" autocomplete="off" required>
-                      <span *ngIf="!fecha_nacimiento.valid && fecha_nacimiento.touched">La fecha de nacimiento es obligatoria</span>
-                    </div>
-                  </div>
-                </fieldset>
-                <fieldset id="account1">
-                  <legend>Tu cuenta</legend>
-                  <div class="form-group required">
-                    <label for="input-email" class="col-sm-2 control-label">Correo electrónico</label>
-                    <div class="col-sm-10">
-                      <input type="email" #correo="ngModel" class="form-control" id="input-email" placeholder="Ingresa tu correo" value="" name="correo" [(ngModel)]="user.correo" autocomplete="off" required>
-                      <span *ngIf="!correo.valid && correo.touched">El correo es obligatorio</span>
-                    </div>
-                  </div>
-                  <div class="form-group required">
-                    <label for="input-password" class="col-sm-2 control-label">Contraseña</label>
-                    <div class="col-sm-10">
-                      <input type="password" #password="ngModel" class="form-control" id="input-password" placeholder="Ingresa tu contraseña" value="" name="password" [(ngModel)]="user.password" autocomplete="off" required>
-                      <span *ngIf="!password.valid && password.touched">El password es obligatorio</span>
-                    </div>
-                  </div>
-                  <div class="form-group required">
-                    <label for="input-confirm" class="col-sm-2 control-label">Confirma tu contraseña</label>
-                    <div class="col-sm-10">
-                      <input type="password" class="form-control" id="input-confirm" placeholder="Vuelve a ingresar tu contraseña" value="" name="confirm" autocomplete="off" required>
-                      
-                    </div>
-                  </div>
-                </fieldset>
-                <div *ngIf="alertRegister">
-                  <div class="alert alert-info">
-                      {{alertRegister}}
-                  </div>
                 </div>
+            </div>
+            <!--Footer Part 1 End-->
 
-                <div class="buttons">
-                  <div class="pull-right">
-                    <input type="submit" class="btn btn-primary" value="Registrar">
-                  </div>
+            <!-- Footer Part 2
+            ============================================= -->
+            <div class="fpart-second">
+                <div class="container">
+                    <div id="powered">
+                        <div class="row">
+
+                            <!-- Payments Types
+                  ============================================= -->
+                            <div class="col-md-4">
+                                <div class="payments_types">
+                                    <a href="#" target="_blank"> <img data-toggle="tooltip" src="assets/image/payment/payment_paypal.png" tppabs="assets/image/payment/payment_paypal.png" alt="paypal" title="PayPal"></a>
+                                </div>
+                            </div>
+                            <!--Payments Types End-->
+
+                            <!-- Payments Types
+                    ============================================= -->
+                            <div class="powered_text pull-left flip col-md-4">SISCOM Electrónica © 2019, diseñado por DataKami</div>
+
+                            <!-- Social Icon
+                    ============================================= -->
+                            <div class="col-md-4">
+                                <div class="social pull-right flip">
+                                    <a href="'https://www.facebook.com/siscomelectronica1/" tppabs="https://www.facebook.com/siscomelectronica1/" target="_blank"> <img data-toggle="tooltip" src="assets/image/socialicons/facebook.png" tppabs="assets/image/socialicons/facebook.png" alt="Facebook" title="Facebook"></a>
+                                    <a href="#" target="_blank"> <img data-toggle="tooltip" src="assets/image/socialicons/twitter.png" tppabs="assets/image/socialicons/twitter.png" alt="Twitter" title="Twitter"> </a>
+                                </div>
+                            </div>
+                            <!--Payments Types End-->
+                        </div>
+                    </div>
+
+                    <!-- Custom Block
+                ============================================= -->
+                    <div class="custom-text">
+                        <p>SISCOM Electrónica desde 1995. Empresa mexicana con oficinas en la Ciudad de México dedicada a ayudar a la comunidad estudiantil de todo el país.</p>
+                    </div>
+                    <!--Custom Block End-->
+
                 </div>
-              </form>
             </div>
-      
-  <!-- Feature Box
-  ============================================= -->
-  <div class="container">
-    <div class="custom-feature-box row">
-        <div class="col-md-4 col-sm-4 col-xs-12">
-            <div class="feature-box fbox_1">
-                <div class="title">Devolución sin Costo</div>
-                <p>en pedidos superiores a $ 1,000</p>
-            </div>
-        </div>
-        <div class="col-md-4 col-sm-4 col-xs-12">
-            <div class="feature-box fbox_2">
-                <div class="title">Envío Gratis</div>
-                <p>en pedidos superiores a $ 1,000</p>
-            </div>
-        </div>
-        <div class="col-md-4 col-sm-4 col-xs-12">
-            <div class="feature-box fbox_3">
-                <div class="title">Tarjetas de regalo</div>
-                <p>Give the special perfect gift</p>
-            </div>
-        </div>
+            <!--Footer Part 2 End-->
+
+            <!-- Back to Top
+            ============================================= -->
+            <div id="back-top"><a data-toggle="tooltip" title="Back to Top" href="javascript:void(0)" class="backtotop"><i class="fa fa-chevron-up"></i></a></div>
+
+        </footer>
+        <!--Footer End-->
     </div>
-  </div>
-  <!-- Feature Box End-->
 
-  
-
-
-<!-- Footer
-  ============================================= -->
-  <footer id="footer">
-
-      <!-- Footer Part 1
-  ============================================= -->
-      <div class="fpart-first">
-          <div class="container">
-              <div class="row">
-  
-                  <div class="column col-lg-2 col-md-2 col-sm-3 col-xs-12">
-                      <h5>Information</h5>
-                      <ul>
-                          <li><a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/about-us.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/about-us.html'"
-                                  tppabs="http://demo.harnishdesign.net/html/bigshop/v1/about-us.html">About Us</a></li>
-                          <li><a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/about-us.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/about-us.html'"
-                                  tppabs="http://demo.harnishdesign.net/html/bigshop/v1/about-us.html">Delivery Information</a></li>
-                          <li><a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/about-us.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/about-us.html'"
-                                  tppabs="http://demo.harnishdesign.net/html/bigshop/v1/about-us.html">Privacy Policy</a></li>
-                          <li><a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/about-us.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/about-us.html'"
-                                  tppabs="http://demo.harnishdesign.net/html/bigshop/v1/about-us.html">Terms &amp; Conditions</a></li>
-                      </ul>
-                  </div>
-                  <div class="column col-lg-2 col-md-2 col-sm-3 col-xs-12">
-                      <h5>Customer Service</h5>
-                      <ul>
-                          <li><a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/contact-us.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/contact-us.html'"
-                                  tppabs="http://demo.harnishdesign.net/html/bigshop/v1/contact-us.html">Contact Us</a></li>
-                          <li><a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/returns.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/returns.html'"
-                                  tppabs="http://demo.harnishdesign.net/html/bigshop/v1/returns.html">Returns</a></li>
-                          <li><a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/sitemap.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/sitemap.html'"
-                                  tppabs="http://demo.harnishdesign.net/html/bigshop/v1/sitemap.html">Site Map</a></li>
-                      </ul>
-                  </div>
-                  <div class="column col-lg-2 col-md-2 col-sm-3 col-xs-12">
-                      <h5>Extras</h5>
-                      <ul>
-                          <li><a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/manufacturer.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/manufacturer.html'"
-                                  tppabs="http://demo.harnishdesign.net/html/bigshop/v1/manufacturer.html">Brands</a></li>
-                          <li><a href="javascript:if(confirm('http://demo.harnishdesign.net/html/bigshop/v1/gift-voucher.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\'s Robot Exclusion parameters.  (Teleport Pro\'s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?'))window.location='http://demo.harnishdesign.net/html/bigshop/v1/gift-voucher.html'"
-                                  tppabs="http://demo.harnishdesign.net/html/bigshop/v1/gift-voucher.html">Gift Vouchers</a></li>
-                          <li><a href="#">Affiliates</a></li>
-                          <li><a href="#">Specials</a></li>
-                      </ul>
-                  </div>
-                  <div class="column col-lg-2 col-md-2 col-sm-3 col-xs-12">
-                      <h5>My Account</h5>
-                      <ul>
-                          <li><a href="#">My Account</a></li>
-                          <li><a href="#">Wish List</a></li>
-                          <li><a href="#">Order History</a></li>
-                          <li><a href="#">Newsletter</a></li>
-                      </ul>
-                  </div>
-  
-                  <div class="contact col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                      <h5>Contact Details</h5>
-                      <ul>
-                          <li class="address"><i class="fa fa-map-marker"></i>Bigshop Plaza, 22 Hoi Wing Road, Delhi, India.</li>
-                          <li class="mobile"><i class="fa fa-phone"></i>+91 9898989898</li>
-                          <li class="email"><i class="fa fa-envelope"></i><a href="mailto:info@bigshop.com">info@bigshop.com</a>
-                      </ul>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <!--Footer Part 1 End-->
-  
-      <!-- Footer Part 2
-  ============================================= -->
-      <div class="fpart-second">
-          <div class="container">
-              <div id="powered">
-                  <div class="row">
-  
-                      <!-- Payments Types
+    <!-- Facebook Side Block
         ============================================= -->
-                      <div class="col-md-4">
-                          <div class="payments_types">
-                              <a href="#" target="_blank"> <img data-toggle="tooltip" src="assets/image/payment/payment_paypal.png" tppabs="http://demo.harnishdesign.net/html/bigshop/v1/image/payment/payment_paypal.png" alt="paypal" title="PayPal"></a>
-                              <a href="#" target="_blank">
-                                  <img data-toggle="tooltip" src="assets/image/payment/payment_american.png" tppabs="http://demo.harnishdesign.net/html/bigshop/v1/image/payment/payment_american.png" alt="american-express" title="American Express"></a>
-                              <a href="#" target="_blank"> <img data-toggle="tooltip" src="assets/image/payment/payment_2checkout.png" tppabs="http://demo.harnishdesign.net/html/bigshop/v1/image/payment/payment_2checkout.png" alt="2checkout" title="2checkout"></a>
-                              <a href="#" target="_blank"> <img data-toggle="tooltip" src="assets/image/payment/payment_maestro.png" tppabs="http://demo.harnishdesign.net/html/bigshop/v1/image/payment/payment_maestro.png" alt="maestro" title="Maestro"></a>
-                              <a href="#" target="_blank">
-                                  <img data-toggle="tooltip" src="assets/image/payment/payment_discover.png" tppabs="http://demo.harnishdesign.net/html/bigshop/v1/image/payment/payment_discover.png" alt="discover" title="Discover"></a>
-                          </div>
-                      </div>
-                      <!--Payments Types End-->
-  
-                      <!-- Payments Types
+    <div id="facebook" class="fb-right sort-order-1">
+        <div class="facebook_icon"><i class="fa fa-facebook"></i></div>
+        <div class="fb-page" data-href="https://www.facebook.com/siscomelectronica1/" tppabs="https://www.facebook.com/siscomelectronica1/" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true" data-show-posts="false">
+            <div class="fb-xfbml-parse-ignore">
+                <blockquote cite="https://www.facebook.com/siscomelectronica1/"><a href="https://www.facebook.com/siscomelectronica1/" tppabs="https://www.facebook.com/siscomelectronica1/">SISCOM Electrónica</a></blockquote>
+            </div>
+        </div>
+        <div id="fb-root"></div>
+        <script>
+            (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "../../../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4" /*tpa=http://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4*/ ;
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+    </div>
+    <!-- Facebook Side Block End -->
+
+    <!-- Twitter Side Block
           ============================================= -->
-                      <div class="powered_text pull-left flip col-md-4">Bigshop Template © 2018, Template By HarnishDesign</div>
-  
-                      <!-- Social Icon
-          ============================================= -->
-                      <div class="col-md-4">
-                          <div class="social pull-right flip">
-                              <a href="javascript:if(confirm('https://www.facebook.com/harnishdesign/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed using an unsupported protocol (e.g., gopher).  \n\nDo you want to open it from the server?'))window.location='https://www.facebook.com/harnishdesign/'"
-                                  tppabs="https://www.facebook.com/harnishdesign/" target="_blank"> <img data-toggle="tooltip" src="assets/image/socialicons/facebook.png" tppabs="http://demo.harnishdesign.net/html/bigshop/v1/image/socialicons/facebook.png" alt="Facebook" title="Facebook"></a>
-                              <a href="#" target="_blank">
-                                  <img data-toggle="tooltip" src="assets/image/socialicons/twitter.png" tppabs="http://demo.harnishdesign.net/html/bigshop/v1/image/socialicons/twitter.png" alt="Twitter" title="Twitter"> </a>
-                              <a href="#" target="_blank">
-                                  <img data-toggle="tooltip" src="assets/image/socialicons/google_plus.png" tppabs="http://demo.harnishdesign.net/html/bigshop/v1/image/socialicons/google_plus.png" alt="Google+" title="Google+"> </a>
-                              <a href="#" target="_blank">
-                                  <img data-toggle="tooltip" src="assets/image/socialicons/pinterest.png" tppabs="http://demo.harnishdesign.net/html/bigshop/v1/image/socialicons/pinterest.png" alt="Pinterest" title="Pinterest"> </a>
-                              <a href="#" target="_blank">
-                                  <img data-toggle="tooltip" src="assets/image/socialicons/rss.png" tppabs="http://demo.harnishdesign.net/html/bigshop/v1/image/socialicons/rss.png" alt="RSS" title="RSS"> </a>
-                          </div>
-                      </div>
-                      <!--Payments Types End-->
-                  </div>
-              </div>
-  
-              <!-- Custom Block
-      ============================================= -->
-              <div class="custom-text">
-                  <p>This is a CMS block. You can insert any content (HTML, Text, Images) Here. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-              </div>
-              <!--Custom Block End-->
-  
-          </div>
-      </div>
-      <!--Footer Part 2 End-->
-  
-      <!-- Back to Top
-  ============================================= -->
-      <div id="back-top"><a data-toggle="tooltip" title="Back to Top" href="javascript:void(0)" class="backtotop"><i class="fa fa-chevron-up"></i></a></div>
-  
-  </footer>
-  <!--Footer End-->
-  
-  </div>
-  </div>
-  </div>
+    <div id="twitter_footer" class="twit-right sort-order-2">
+        <div class="twitter_icon"><i class="fa fa-twitter"></i></div>
+        <a class="twitter-timeline" href="https://twitter.com/Siscom_Electro" tppabs="https://twitter.com/Siscom_Electro" data-chrome="nofooter transparent" data-theme="light" data-related="twitterapi,twitter" data-aria-polite="assertive" data-widget-id="2596786009">Tweets by @Siscom_electro</a>
+        <script>
+            ! function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0],
+                    p = /^http:/.test(d.location) ? 'http' : 'https';
+                if (!d.getElementById(id)) {
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = p + "://platform.twitter.com/widgets.js";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }
+            }(document, "script", "twitter-wjs");
+        </script>
+    </div>
+    <!-- Twitter Side Block End -->
+
+</div>

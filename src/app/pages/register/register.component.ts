@@ -11,13 +11,20 @@ import { UserService } from '../../services/user.service';
 export class RegisterComponent implements OnInit {
 
   public user: User;
+  public identity;
+  public token;
   public alertRegister;
 
   constructor( private _userService:UserService) {
-    this.user = new User('','','','','','','ROLE_USER');
+    this.user = new User('','','','','','','','','','ROLE_USER');
    }
 
   ngOnInit() {
+     this.identity = this._userService.getIdentity();
+     this.token = this._userService.getToken();
+
+     console.log(this.identity);
+     console.log(this.token);
   }
 
   onSubmitRegister(){
@@ -32,7 +39,9 @@ export class RegisterComponent implements OnInit {
           this.alertRegister = 'Error al registrarse';
         }else{
           this.alertRegister = 'El registro se ha realizado correctamente';
-          this.user = new User('','','','','','','ROLE_USER');
+          //this.user = new User('','','','','','','','','','ROLE_USER');
+          alert('El registro se ha realizado correctamente. Por favor, inicie sesión con sus credenciales.');
+          location.replace("http://localhost:4200/login");
         }
       },
       error => {

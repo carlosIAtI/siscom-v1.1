@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
   public errorMessage;
 
   constructor( private _userService:UserService) {
-    this.user = new User('','','','','','','ROLE_USER');
+    this.user = new User('','','','','','','','','','ROLE_USER');
    }
 
    ngOnInit() {
