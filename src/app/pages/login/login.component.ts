@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../../models/user';
 import { UserService } from '../../services/user.service';
+import { DynamicScriptLoaderService } from '../../services/dynamic-script-loader.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
-  providers: [UserService]
+  providers: [UserService, DynamicScriptLoaderService]
 })
 
 export class LoginComponent implements OnInit {
@@ -17,8 +18,8 @@ export class LoginComponent implements OnInit {
   public token;
   public errorMessage;
 
-  constructor( private _userService:UserService) {
-    this.user = new User('','','','','','','','','','ROLE_USER');
+  constructor( private _userService:UserService, private dynamicScriptLoader: DynamicScriptLoaderService) {
+    this.user = new User('','','','','','','','','','','ROLE_USER');
    }
 
    ngOnInit() {
@@ -27,6 +28,9 @@ export class LoginComponent implements OnInit {
 
      console.log(this.identity);
      console.log(this.token);
+
+     this.loadScripts();
+
   }
 
    public onSubmit(){
@@ -90,5 +94,12 @@ export class LoginComponent implements OnInit {
      this.identity = null;
      this.token = null;
    }
+
+   private loadScripts() {
+    // You can load multiple scripts by just providing the key as argument into load method of the service
+    this.dynamicScriptLoader.load('jquery','bootstrap','accordion','carousel','custom').then(data => {
+      // Script Loaded Successfully
+    }).catch(error => console.log(error));
+  }
 
 }

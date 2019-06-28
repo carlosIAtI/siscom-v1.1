@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../../models/user';
 import { UserService } from '../../services/user.service';
+import { DynamicScriptLoaderService } from '../../services/dynamic-script-loader.service';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css'],
-  providers: [UserService]
+  providers: [UserService, DynamicScriptLoaderService]
 })
 export class RegisterComponent implements OnInit {
 
@@ -15,8 +16,8 @@ export class RegisterComponent implements OnInit {
   public token;
   public alertRegister;
 
-  constructor( private _userService:UserService) {
-    this.user = new User('','','','','','','','','','ROLE_USER');
+  constructor( private _userService:UserService, private dynamicScriptLoader: DynamicScriptLoaderService) {
+    this.user = new User('','','','','','','','','','','ROLE_USER');
    }
 
   ngOnInit() {
@@ -25,6 +26,9 @@ export class RegisterComponent implements OnInit {
 
      console.log(this.identity);
      console.log(this.token);
+
+     this.loadScripts();
+
   }
 
   onSubmitRegister(){
@@ -48,11 +52,18 @@ export class RegisterComponent implements OnInit {
         var errorMessage = <any>error;
 
         if(errorMessage != null){
-          this.alertRegister = error.error.message;
+           this.alertRegister = error.error.message;
            console.log(error);
         }
       }
     );
+  }
+
+  private loadScripts() {
+    // You can load multiple scripts by just providing the key as argument into load method of the service
+    this.dynamicScriptLoader.load('jquery','bootstrap','accordion','carousel','custom').then(data => {
+      // Script Loaded Successfully
+    }).catch(error => console.log(error));
   }
 
 }
